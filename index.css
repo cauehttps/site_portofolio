@@ -1,0 +1,155 @@
+body {
+  color: white;
+  font-family: "OCR A Std", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Adiciona um fundo semi-transparente para o menu */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra no menu */
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 35px;
+  text-align: center; /* Centraliza o título */
+}
+
+p {
+  color: black;
+  margin-top: 35px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.5;
+  padding: 15px 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+section {
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+a {
+  color: #ffcc00; /* Muda a cor dos links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff; /* Muda a cor dos links ao passar o mouse */
+}
+
+img.profile-picture {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-top: 22px;
+  border: 5px solid white;
+  position: relative;
+  z-index: 1;
+  animation: borderAnimation 3s infinite;
+}
+
+button {
+  font-family: "OCR A Std", monospace;
+  background: #ffcc00; /* Muda a cor de fundo dos botões */
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+  position: relative;
+  overflow: hidden;
+}
+
+span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background: black;
+  z-index: -1;
+  transition: right 0.5s;
+}
+
+button:hover {
+  color: white;
+}
+
+button:hover::before {
+  right: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+@keyframes borderAnimation {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+  50% {
+    box-shadow: 0 0 20px 10px white;
+  }
+  100% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  align-items: center;
+  padding: 0;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.social-button {
+  background: #ffcc00;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona sombra nos botões sociais */
+}
+
+.social-button.linkedin::before {
+  background: #0077b5;
+}
+
+.social-button.instagram::before {
+  background: #e1306c;
+}
+
+.social-button.github::before {
+  background: #333;
+}

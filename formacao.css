@@ -1,0 +1,178 @@
+body {
+    color: white;
+    background-color: rgb(31, 207, 219);
+    font-family: "OCR A Std", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adiciona um fundo semi-transparente para o menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra no menu */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.nav-button {
+    font-family: "OCR A Std", monospace;
+    background: #ffcc00; /* Muda a cor de fundo dos botões para amarelo */
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.nav-button span {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+.nav-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    background: rgb(0, 0, 0);
+    z-index: -1;
+    transition: right 0.5s;
+}
+
+.nav-button:hover {
+    color: white;
+}
+
+.nav-button:hover::before {
+    right: 0;
+}
+.card-container {
+    display: flex;
+    justify-content: center; /* centraliza os cards horizontalmente */
+    margin-top: 50px; /* margem do topo */
+}
+
+.card {
+    width: 300px;
+    height: auto; /* altura ajustável */
+    margin: 0 50px; /* distância entre os cards */
+    background-color: #1d1d1d; /* cor de fundo alterada */
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: 0px 10px 10px rgb(73, 70, 92);
+    transition: 0.5s;
+    overflow: hidden; /* evitar vazamento de conteúdo */
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5); /* sombra ligeiramente mais escura */
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.circle {
+    padding: 0 4px;
+}
+
+.circle2 {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+.header {
+    margin: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #292929; /* cor de fundo do cabeçalho alterada */
+}
+
+#title2 {
+    color: #ffffff; /* cor do título alterada para branco */
+    padding-left: 10px; /* pequeno ajuste na margem esquerda */
+    font-size: 15px;
+}
+
+.code-container {
+    text-align: center;
+    padding: 10px; /* adicionei um pequeno preenchimento */
+}
+
+#code {
+    width: 250px; /* reduzi um pouco a largura do código */
+    height: 300px; /* ajustei a altura para se adequar melhor ao conteúdo */
+    resize: none;
+    background-color: #333; /* cor de fundo do código alterada */
+    border-radius: 5px;
+    border: none;
+    color: #ffffff; /* cor do texto alterada para branco */
+    padding: 10px;
+}
+
+#code:focus {
+    outline: none !important;
+}
+
+/* Estilização para o título */
+h1 {
+    color: #ffffff; /* cor do texto alterada para branco */
+    text-align: center; /* centraliza o texto */
+    font-size: 24px; /* tamanho do texto */
+    margin-top: 20px; /* margem superior */
+    padding: 10px; /* adicionei um pequeno preenchimento */
+    background-color: #1d1d1d; /* cor de fundo alterada */
+    border-radius: 8px; /* bordas arredondadas */
+    box-shadow: 0px 10px 10px rgb(73, 70, 92); /* sombra */
+    width: 200px; /* largura do título */
+    margin-left: auto; /* centraliza horizontalmente */
+    margin-right: auto; /* centraliza horizontalmente */
+}
